@@ -12,7 +12,7 @@ export const MovieDetail = () => {
 
   return (
     <section>
-      <h1>{movieId.original_title}</h1>
+      
     </section>
   )
 };
