@@ -1,4 +1,8 @@
+import SearchForm from "../SearchForm/SearchForm";
+
 export const HomeBanner = () => {
+
+
   return (
     <article style={{ border: "1px solid red" }}>
       <h1>
@@ -6,7 +10,7 @@ export const HomeBanner = () => {
         now.
       </h1>
 
-      <input type="text" />
+     <SearchForm />
     </article>
   );
 };
