@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchMovieDetail } from "../../store/thunks/movieDetail";
 import { getData, getIsLoading } from "../../store/slices/movieDetail";
 import { useParams } from "react-router";
+import { IMAGE_URL } from "../../constants/image";
 
 export const MovieDetail = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ export const MovieDetail = () => {
 
   return (
     <div>
-      <img src={`https://media.themoviedb.org/t/p/w300_and_h450_bestv2${details.poster_path}`} alt="poster" />
+      <img src={`${IMAGE_URL}/w300_and_h450_bestv2${details.poster_path}`} alt="poster" />
       <div>
         <h1>{details.title}</h1>
         <p>Release Date: {details.release_date}</p>
