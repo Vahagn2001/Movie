@@ -1,0 +1,1 @@
+export const imageUrl="https://media.themoviedb.org/t/p"
