@@ -6,7 +6,7 @@ import {
   getList,
   getIsError,
 } from "../../store/slices/searchMovieSlice";
-import SearchCart from "../../components/SearchCart/SearchCart";
+import {SearchCart} from "../../components/SearchCart/SearchCart";
 import { useSearchParams } from "react-router-dom";
 
 export const Search = () => {

@@ -1,1 +1,1 @@
-export const imageUrl="https://media.themoviedb.org/t/p"
+export const IMAGE_URL = "https://media.themoviedb.org/t/p";
