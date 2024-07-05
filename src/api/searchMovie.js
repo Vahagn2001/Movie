@@ -6,3 +6,10 @@ export const searchMovie = async (query) => {
   );
   return data;
 };
+
+export const searchMovieKeywords = async (query) => {
+  const { data } = await axios.get(
+    `/search/keyword?page=1&query=${query}`
+  );
+  return data;
+};

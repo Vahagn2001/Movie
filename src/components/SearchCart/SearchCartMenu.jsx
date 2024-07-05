@@ -1,7 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { getKeywordsQty } from "../../store/slices/searchMovieSlice";
 import "../SearchCart/searchCart.css";
 
-const SearchCartMenu = () => {
+const SearchCartMenu = ({q}) => {
+  const keywordsQty = useSelector(getKeywordsQty);
+
   return (
     <div className="menu">
       <h2 className="menu__title ">Search Results</h2>
@@ -24,8 +29,10 @@ const SearchCartMenu = () => {
             <span>7</span>
           </li>
           <li className="menu__list-item">
-            <span>Keywords</span>
-            <span>8</span>
+            <Link to={`/search/keywords?q=${q}`}>
+              <span>Keywords</span>
+              <span>{keywordsQty}</span>
+            </Link>
           </li>
           <li className="menu__list-item">
             <span>Collections</span>
