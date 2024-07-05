@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import "../SearchForm/indexForm.css";
 
 const SearchForm = () => {
   const [movie, setMovie] = useState("");
@@ -15,9 +16,17 @@ const SearchForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={movie} onChange={handleChange} />
-      <button type="submit">Search</button>
+    <form onSubmit={handleSubmit} className="search">
+      <input
+        type="text"
+        value={movie}
+        onChange={handleChange}
+        className="search__inp"
+        placeholder="Search for a movie,TV Show,Person..."
+      />
+      <button type="submit" className="search__btn">
+        Search
+      </button>
     </form>
   );
 };
