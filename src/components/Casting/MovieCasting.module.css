@@ -1,0 +1,21 @@
+.movieCastSwiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.movieCastSlide {
+    text-align: center;
+}
+
+.movieCastImage {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.movieCastTitle {
+    display: flex;
+    justify-content: center;
+}
