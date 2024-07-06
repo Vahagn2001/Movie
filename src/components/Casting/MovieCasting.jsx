@@ -8,10 +8,30 @@ import { Navigation } from "swiper/modules";
 import { movieCasting } from "../../api/movieCasting";
 import { useQuery } from "@tanstack/react-query";
 
+const breakpoints = {
+    320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+    },
+    640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+    },
+    768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+    },
+    1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+    },
+}
+const modules = [Navigation]
+
 export const MovieCasting = () => {
     const { movieId } = useParams();
     const { isPending, error, data } = useQuery({
-        queryKey: ['movieCasting'],
+        queryKey: ['movieCasting', movieId],
         queryFn: () =>
             movieCasting(movieId)
     })
@@ -24,30 +44,13 @@ export const MovieCasting = () => {
             <h1 className={style.movieCastTitle}>Top Billed Cast</h1>
             <div className={style.movieCastSwiper}>
                 <Swiper
-                    modules={[Navigation]}
+                    modules={modules}
                     navigation
                     spaceBetween={50}
                     slidesPerView={5}
-                    breakpoints={{
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 10,
-                        },
-                        640: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 3,
-                            spaceBetween: 30,
-                        },
-                        1024: {
-                            slidesPerView: 5,
-                            spaceBetween: 50,
-                        },
-                    }}
+                    breakpoints={breakpoints}
                 >
-                    {data && data.cast && Array.isArray(data.cast) && data.cast.map((cast) => (
+                    {data.cast.map((cast) => (
                         <SwiperSlide key={cast.id} className={style.movieCastSlide}>
                             <div>
                                 <img

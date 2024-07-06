@@ -8,7 +8,6 @@
 .movieDetail {
     display: flex;
     gap: 2rem;
-    flex-wrap: nowrap;
     align-items: center;
     background-image: linear-gradient(
         to right,
