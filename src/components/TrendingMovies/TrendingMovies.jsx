@@ -1,29 +1,22 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTrendingMovies } from "../../store/thunks/trendingMovies";
-import {
-  getError,
-  getIsLoading,
-  getList,
-} from "../../store/slices/trendingMovies";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css/navigation";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { TrendingMovie } from "../TrendingMovie/TrendingMovie";
+import { getMoviesByPopularity } from "../../api/discoverMovie";
+import { useQuery } from "@tanstack/react-query";
 
 export const TrendingMovies = () => {
-  const dispatch = useDispatch();
-  const list = useSelector(getList);
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  const { isLoading, isError, data } = useQuery({
+    queryFn: getMoviesByPopularity,
+    queryKey: ["popularMovies"],
+  });
 
-  useEffect(() => {
-    dispatch(fetchTrendingMovies());
-  }, [dispatch]);
-
-  if (error) return <div>Something went wrong!</div>;
+  if (isError) return <div>Something went wrong!</div>;
 
   if (isLoading) return <div>Loading...</div>;
 
@@ -36,7 +29,7 @@ export const TrendingMovies = () => {
         spaceBetween={50}
         slidesPerView={5}
       >
-        {list.map((movie) => (
+        {data.results.map((movie) => (
           <SwiperSlide key={movie.id}>
             <TrendingMovie movie={movie} />
           </SwiperSlide>
