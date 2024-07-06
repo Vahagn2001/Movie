@@ -1,0 +1,18 @@
+.movieDetailBg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left calc((50vw - 170px) - 340px) top;
+    color: white;
+}
+
+.movieDetail {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-image: linear-gradient(
+        to right,
+        rgba(31.5, 10.5, 10.5, 1) calc((50vw - 170px) - 340px),
+        rgba(31.5, 10.5, 10.5, 0.84) 50%,
+        rgba(31.5, 10.5, 10.5, 0.84) 100%
+    );
+}
