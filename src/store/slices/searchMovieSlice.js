@@ -1,6 +1,7 @@
 import {
   searchFetchMovie,
   searchFetchMovieKeywords,
+  searchFetchMovieTVShow
 } from "../thunks/searchMovieThunk";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -11,6 +12,8 @@ const searchMovieSlices = createSlice({
     searchList: [],
     keywords: [],
     keywordsQty: 0,
+    tvShow:[],
+    tvShowQty:0,
     error: false,
   },
 
@@ -32,17 +35,24 @@ const searchMovieSlices = createSlice({
       state.keywords = action.payload.results;
       state.keywordsQty = action.payload.total_results;
     });
+
+    builder.addCase(searchFetchMovieTVShow.fulfilled,(state,action)=>{
+      state.tvShow=action.payload.results,
+      state.tvShowQty=action.payload.total_results
+    })
   },
   selectors: {
     getIsLoading: (state) => state.isLoading,
     getList: (state) => state.searchList,
     getKeywordsQty: (state) => state.keywordsQty,
     getKeywords: (state) => state.keywords,
+    getTVShow:(state)=>state.tvShow,
+    getTVShowQty:(state)=>state.tvShowQty,
     getIsError: (state) => state.error,
   },
 });
 
-export const { getIsLoading, getList, getIsError, getKeywordsQty, getKeywords } =
+export const { getIsLoading, getList, getIsError, getKeywordsQty, getKeywords,getTVShow,getTVShowQty } =
   searchMovieSlices.selectors;
 
 export default searchMovieSlices.reducer;

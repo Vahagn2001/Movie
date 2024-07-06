@@ -1,4 +1,4 @@
-import { searchMovie, searchMovieKeywords } from "../../api/searchMovie";
+import { searchMovie, searchMovieKeywords,searchMovieTVShow} from "../../api/searchMovie";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const searchFetchMovie = createAsyncThunk(
@@ -9,4 +9,10 @@ export const searchFetchMovie = createAsyncThunk(
 export const searchFetchMovieKeywords = createAsyncThunk(
   "searchMovie/keywords",
   searchMovieKeywords
+);
+
+
+export const searchFetchMovieTVShow=createAsyncThunk(
+  "searchMovie/TVShow",
+  searchMovieTVShow
 );

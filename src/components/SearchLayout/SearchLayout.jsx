@@ -4,6 +4,7 @@ import SearchCartMenu from "../SearchCart/SearchCartMenu";
 import {
   searchFetchMovie,
   searchFetchMovieKeywords,
+  searchFetchMovieTVShow,
 } from "../../store/thunks/searchMovieThunk";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
@@ -16,6 +17,7 @@ export const SearchLayout = ({ children }) => {
   useEffect(() => {
     dispatch(searchFetchMovieKeywords(q));
     dispatch(searchFetchMovie(q));
+    dispatch(searchFetchMovieTVShow(q))
   }, [dispatch, q]);
 
   return (

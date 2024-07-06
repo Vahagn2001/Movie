@@ -6,7 +6,7 @@ import {
   getIsLoading,
   getList,
 } from "../../store/slices/searchMovieSlice";
-import "../Search/index.css";
+import SearchList from "../../components/SearchList/SearchList";
 
 export const Search = () => {
   const isLoading = useSelector(getIsLoading);
@@ -17,15 +17,7 @@ export const Search = () => {
 
   return (
     <SearchLayout>
-      {isLoading ? (
-        <div>Loading...</div>
-      ) : (
-        <ul className="boxes">
-          {list.map((item) => {
-            return <SearchCart key={item.id} item={item} />;
-          })}
-        </ul>
-      )}
+      {isLoading ? <div>Loading...</div> : <SearchList list={list} />}
     </SearchLayout>
   );
 };

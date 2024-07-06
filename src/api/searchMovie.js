@@ -8,8 +8,14 @@ export const searchMovie = async (query) => {
 };
 
 export const searchMovieKeywords = async (query) => {
+  const { data } = await axios.get(`/search/keyword?page=1&query=${query}`);
+  return data;
+};
+
+export const searchMovieTVShow = async (query) => {
   const { data } = await axios.get(
-    `/search/keyword?page=1&query=${query}`
+    `/search/tv?include_adult=false&language=en-US&page=1&query=${query}`
   );
+  console.log(data)
   return data;
 };

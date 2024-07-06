@@ -4,6 +4,7 @@ import { Search } from "./pages/Search/Search";
 import { MovieDetail } from "./pages/MovieDetail/MovieDetail";
 import { Header } from "./components/Header/Header";
 import { SearchKeywords } from "./pages/SearchKeywords/SearchKeywords";
+import SearchTVShow from "./pages/SearchTVShow/SearchTVShow";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,9 @@ export const router = createBrowserRouter([
       {
         path: "/search/keywords",
         element: <SearchKeywords />,
+      },
+      { path: "/search/tvShow", 
+        element: <SearchTVShow /> 
       },
       {
         path: "/movie/:movieId",
