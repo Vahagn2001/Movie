@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getKeywordsQty, getTVShowQty } from "../../store/slices/searchMovieSlice";
-import style from  "../SearchCart/searchCart.module.css";
+import style from  "../SearchCart/SearchCart.module.css";
 
 const SearchCartMenu = ({q}) => {
   const keywordsQty = useSelector(getKeywordsQty);

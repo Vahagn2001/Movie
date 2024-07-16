@@ -1,7 +1,7 @@
 import React from "react";
 import { SearchCart } from "../SearchCart/SearchCart";
 
-import style from "../SearchList/index.module.css"
+import style from "../SearchList/Index.module.css"
 
 const SearchList = ({ list }) => {
   return (

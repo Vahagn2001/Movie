@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { SearchLayout } from "../../components/SearchLayout/SearchLayout";
 import { getKeywords } from "../../store/slices/searchMovieSlice";
-import style from "../../components/SearchList/index.module.css";
+import style from "../../components/SearchList/Index.module.css";
 
 export const SearchKeywords = () => {
   const list = useSelector(getKeywords);

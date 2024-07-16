@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
-import style from "./header.module.css";
-import style2 from "../SearchList/index.module.css";
+import style from "./Header.module.css";
+import style2 from "../SearchList/Index.module.css";
 
 export const Header = () => {
   return (

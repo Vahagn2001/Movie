@@ -1,5 +1,5 @@
 import SearchForm from "../SearchForm/SearchForm";
-import style from "../HomeBanner/homeBanner.module.css";
+import style from "../HomeBanner/HomeBanner.module.css";
 
 export const HomeBanner = () => {
   return (

@@ -8,7 +8,7 @@ import {
 } from "../../store/thunks/searchMovieThunk";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import style from "../SearchList/index.module.css"
+import style from "../SearchList/Index.module.css"
 
 export const SearchLayout = ({ children }) => {
   const dispatch = useDispatch();

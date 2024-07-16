@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import style from  "../SearchForm/indexForm.module.css";
+import style from  "../SearchForm/IndexForm.module.css";
 
 const SearchForm = () => {
   const [movie, setMovie] = useState("");
