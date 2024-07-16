@@ -16,6 +16,5 @@ export const searchMovieTVShow = async (query) => {
   const { data } = await axios.get(
     `/search/tv?include_adult=false&language=en-US&page=1&query=${query}`
   );
-  console.log(data)
   return data;
 };

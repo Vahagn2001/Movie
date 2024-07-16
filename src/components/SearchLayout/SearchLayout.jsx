@@ -8,6 +8,7 @@ import {
 } from "../../store/thunks/searchMovieThunk";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
+import style from "../SearchList/index.module.css"
 
 export const SearchLayout = ({ children }) => {
   const dispatch = useDispatch();
@@ -17,13 +18,13 @@ export const SearchLayout = ({ children }) => {
   useEffect(() => {
     dispatch(searchFetchMovieKeywords(q));
     dispatch(searchFetchMovie(q));
-    dispatch(searchFetchMovieTVShow(q))
+    dispatch(searchFetchMovieTVShow(q));
   }, [dispatch, q]);
 
   return (
-    <div className="container">
+    <div className={style.container}>
       <SearchForm />
-      <div className="cont">
+      <div className={style.cont}>
         <SearchCartMenu q={q} />
         {children}
       </div>

@@ -25,7 +25,7 @@
   border-radius: 4px;
 }
 
-.menu__list-item {
+.menu__listItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@
   padding: 0.5rem;
 }
 
-.menu__list-item:hover {
+.menu__listItem:hover {
   background-color: rgb(157, 153, 153);
 }
 
