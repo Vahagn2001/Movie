@@ -1,8 +1,7 @@
 import React from "react";
 import { IMAGE_URL } from "../../constants/image";
-import style from  "../SearchCart/SearchCart.module.css";
-import style2 from "../SearchList/Index.module.css"
-import SearchCartMenu from "./SearchCartMenu";
+import style from "../SearchCart/SearchCart.module.css";
+import style2 from "../SearchList/Index.module.css";
 
 export const SearchCart = ({ item }) => {
   return (

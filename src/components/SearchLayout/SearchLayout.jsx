@@ -4,6 +4,7 @@ import SearchCartMenu from "../SearchCart/SearchCartMenu";
 import {
   searchFetchMovie,
   searchFetchMovieKeywords,
+  searchFetchMoviePeople,
   searchFetchMovieTVShow,
 } from "../../store/thunks/searchMovieThunk";
 import { useDispatch } from "react-redux";
@@ -19,6 +20,7 @@ export const SearchLayout = ({ children }) => {
     dispatch(searchFetchMovieKeywords(q));
     dispatch(searchFetchMovie(q));
     dispatch(searchFetchMovieTVShow(q));
+    dispatch(searchFetchMoviePeople(q))
   }, [dispatch, q]);
 
   return (
