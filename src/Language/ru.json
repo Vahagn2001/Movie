@@ -1,0 +1,21 @@
+{
+    "Movie": "Фильм",
+    "People": "Люди",
+    "Keywords": "Ключевые слова",
+    "Collections": "Коллекции",
+    "Companies": "Компании",
+    "Networks": "Сети",
+    "More":"Более",
+    "Movies": "Кино",
+    "Login":"Авторизоваться",
+    "Join":"Присоединиться",
+    "Welcome.":"Добро пожаловать.",
+    "Millions of movies, TV shows and people to discover. Explore now.":
+    "Миллионы фильмов, телешоу и людей, которых стоит открыть для себя. Исследуйте сейчас.",
+    "Search for a movie,TV Show,Person...":
+    "Поиск фильма, телепередачи, человека...",
+    "Search":"Поиск",
+    "Trending Movies":"«Трендовые фильмы»",
+    "Tip: You can use the y: filter to narrow your results by year.Example:star wars y:1977":"«Совет: вы можете использовать фильтр y:, чтобы сузить результаты по году. Пример: звездные войны y:1977»"
+
+  }

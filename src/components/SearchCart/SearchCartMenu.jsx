@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 import { getKeywordsQty, getTVShowQty } from "../../store/slices/searchMovieSlice";
 import style from  "../SearchCart/SearchCart.module.css";
 
+import { useTranslation } from 'react-i18next';
+
 const SearchCartMenu = ({q}) => {
   const keywordsQty = useSelector(getKeywordsQty);
   const tvShowQty=useSelector(getTVShowQty)
+
+  const { t, i18n } = useTranslation();
 
   return (
     <div className={style.menu}>
@@ -14,7 +18,7 @@ const SearchCartMenu = ({q}) => {
       <div>
         <ul className={style.menu__list}>
           <li className={style.menu__listItem}>
-            <span>Movie</span>
+            <span>{t("Movie")}</span>
             <span>4</span>
           </li>
           <li className={style.menu__listItem}>
@@ -25,33 +29,32 @@ const SearchCartMenu = ({q}) => {
             
           </li>
           <li className={style.menu__listItem}>
-            <span>People</span>
+            <span>{t("People")}</span>
             <span>6</span>
           </li>
           <li className={style.menu__listItem}>
-            <span>Companies</span>
+            <span>{t("Companies")}</span>
             <span>7</span>
           </li>
           <li className={style.menu__listItem}>
             <Link to={`/search/keywords?q=${q}`}>
-              <span>Keywords</span>
+              <span>{t("Keywords")}</span>
               <span>{keywordsQty}</span>
             </Link>
           </li>
           <li className={style.menu__listItem}>
-            <span>Collections</span>
+            <span>{t("Collections")}</span>
             <span>9</span>
           </li>
           <li className={style.menu__listItem}>
-            <span>Networks</span>
+            <span>{t("Networks")}</span>
             <span>10</span>
           </li>
         </ul>
       </div>
 
-      <p className="menu__setting">
-        Tip: You can use the 'y:' filter to narrow your results by year.
-        Example: 'star wars y:1977'.
+      <p className={style.menu__setting}>
+        {t("Tip: You can use the y: filter to narrow your results by year.Example:star wars y:1977")}.
       </p>
     </div>
   );

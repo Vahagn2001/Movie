@@ -1,0 +1,19 @@
+{
+    "Movie": "Movie",
+    "People": "People",
+    "Keywords": "Keywords",
+    "Collections": "Collections",
+    "Companies": "Companies",
+    "Networks": "Networks",
+    "More":"More",
+    "Movies":"Movies",
+    "Login":"Login",
+    "Join":"Join",
+    "Welcome.":"Welcome.",
+    "Millions of movies, TV shows and people to discover. Explore now.":"Millions of movies, TV shows and people to discover. Explore now.",
+    "Search for a movie,TV Show,Person...":"Search for a movie,TV Show,Person...",
+    "Search":"Search",
+    "Trending Movies":"Trending Movies",
+    "Tip: You can use the y: filter to narrow your results by year.Example:star wars y:1977":"Tip: You can use the y: filter to narrow your results by year.Example:star wars y:1977"
+    
+  }

@@ -1,8 +1,17 @@
 import { Outlet } from "react-router";
 import style from "./Header.module.css";
 import style2 from "../SearchList/Index.module.css";
+import { changeLanguage } from "i18next";
+import { useTranslation } from 'react-i18next';
+
+
 
 export const Header = () => {
+  
+ const onLngChange=(e)=>changeLanguage(e.target.value)
+const { t, i18n } = useTranslation();
+
+
   return (
     <>
       <header>
@@ -15,16 +24,22 @@ export const Header = () => {
                   alt="header__image"
                 />
               </li>
-              <li className={style.nav__listItem}>Movies</li>
+              <li className={style.nav__listItem}>{t("Movies")}</li>
               <li className={style.nav__listItem}>TV Shows</li>
-              <li className={style.nav__listItem}>People</li>
-              <li className={style.nav__listItem}>More</li>
+              <li className={style.nav__listItem}>{t("People")}</li>
+              <li className={style.nav__listItem}>{t("More")}</li>
             </ul>
             <ul className={style.nav__list}>
               <li className={style.nav__listItem}>+</li>
-              <li className={style.nav__listItem}>EN</li>
-              <li className={style.nav__listItem}>Login</li>
-              <li className={style.nav__listItem}>Join TMDB</li>
+              <li className={style.nav__listItem}>
+                <select name="" id="" onChange={onLngChange}>
+                  <option value="en">English</option>
+                  <option value="ru">Русский</option>
+                  <option value="arm">Армянский</option>
+                </select>
+              </li>
+              <li className={style.nav__listItem}>{t("Login")}</li>
+              <li className={style.nav__listItem}>{t("Join")} TMDB</li>
             </ul>
           </nav>
         </div>

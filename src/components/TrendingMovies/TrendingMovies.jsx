@@ -9,8 +9,11 @@ import { Navigation } from "swiper/modules";
 import { TrendingMovie } from "../TrendingMovie/TrendingMovie";
 import { getMoviesByPopularity } from "../../api/discoverMovie";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 
 export const TrendingMovies = () => {
+  const { t, i18n } = useTranslation();
+
   const { isLoading, isError, data } = useQuery({
     queryFn: getMoviesByPopularity,
     queryKey: ["popularMovies"],
@@ -22,7 +25,7 @@ export const TrendingMovies = () => {
 
   return (
     <section>
-      <h2>Trending Movies</h2>
+      <h2>{t("Trending Movies")}</h2>
       <Swiper
         modules={[Navigation]}
         navigation
