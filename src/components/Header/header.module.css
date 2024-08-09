@@ -1,0 +1,20 @@
+header{
+    background-color: rgb(3, 37, 65);
+    height: 4rem;
+    transition: top .2s linear;
+}
+nav{
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    list-style: none;
+}
+

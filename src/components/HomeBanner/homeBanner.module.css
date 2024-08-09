@@ -1,0 +1,16 @@
+.article{
+    min-height: 300px;
+    height: calc(100vh / 2.5);
+    max-height: 360px;
+    background-color: rgba(0, 0, 0, .2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+
+}
+
+.article__tittle{
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1;
+}
